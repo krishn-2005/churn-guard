@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0a0f;
+  --color-foreground: #e2e8f0;
+  --color-card: #13131f;
+  --color-card-foreground: #e2e8f0;
+  --color-popover: #1a1a2e;
+  --color-popover-foreground: #e2e8f0;
+  --color-primary: #6366f1;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #1e1e2d;
+  --color-secondary-foreground: #e2e8f0;
+  --color-muted: #1e1e2d;
+  --color-muted-foreground: #94a3b8;
+  --color-accent: #8b5cf6;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #2a2a3c;
+  --color-input: #2a2a3c;
+  --color-ring: #6366f1;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+  --radius: 0.75rem;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0f;
+  color: #e2e8f0;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tremor builds chart color class names dynamically, so Tailwind does not
+   always emit them. These utilities keep Recharts fills/strokes from falling
+   back to black in the analytics charts. */
+.fill-emerald-500,
+.dark .dark\:fill-emerald-500 {
+  fill: #10b981;
+}
+
+.fill-red-500,
+.dark .dark\:fill-red-500 {
+  fill: #ef4444;
+}
+
+.fill-indigo-500,
+.dark .dark\:fill-indigo-500 {
+  fill: #6366f1;
+}
+
+.fill-rose-500,
+.dark .dark\:fill-rose-500 {
+  fill: #f43f5e;
+}
+
+.fill-violet-500,
+.dark .dark\:fill-violet-500 {
+  fill: #8b5cf6;
+}
+
+.fill-amber-500,
+.dark .dark\:fill-amber-500 {
+  fill: #f59e0b;
+}
+
+.fill-gray-500,
+.dark .dark\:fill-gray-500 {
+  fill: #6b7280;
+}
+
+.stroke-emerald-500,
+.dark .dark\:stroke-emerald-500 {
+  stroke: #10b981;
+}
+
+.stroke-red-500,
+.dark .dark\:stroke-red-500 {
+  stroke: #ef4444;
+}
+
+.stroke-indigo-500,
+.dark .dark\:stroke-indigo-500 {
+  stroke: #6366f1;
+}
+
+.stroke-rose-500,
+.dark .dark\:stroke-rose-500 {
+  stroke: #f43f5e;
+}
+
+.stroke-violet-500,
+.dark .dark\:stroke-violet-500 {
+  stroke: #8b5cf6;
+}
+
+.stroke-amber-500,
+.dark .dark\:stroke-amber-500 {
+  stroke: #f59e0b;
+}
+
+.bg-indigo-500,
+.dark .dark\:bg-indigo-500 {
+  background-color: #6366f1;
+}
+
+.bg-rose-500,
+.dark .dark\:bg-rose-500 {
+  background-color: #f43f5e;
+}
+
+.bg-emerald-500,
+.dark .dark\:bg-emerald-500 {
+  background-color: #10b981;
+}
+
+.bg-red-500,
+.dark .dark\:bg-red-500 {
+  background-color: #ef4444;
+}
+
+.text-tremor-content,
+.dark .dark\:text-dark-tremor-content {
+  color: #94a3b8;
+}
+
+.text-tremor-content-emphasis,
+.dark .dark\:text-dark-tremor-content-emphasis {
+  color: #e2e8f0;
+}
+
+.analytics-top-reasons .tremor-BarList-labels {
+  min-width: 2.5rem;
+}
+
+.analytics-top-reasons .tremor-BarList-labelText {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+
+.analytics-bucket-chart .recharts-cartesian-axis-tick-value,
+.analytics-bucket-chart .text-tremor-label {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.fill-tremor-content,
+.dark .dark\:fill-dark-tremor-content {
+  fill: #94a3b8;
+}
+
+.fill-tremor-content-emphasis,
+.dark .dark\:fill-dark-tremor-content-emphasis {
+  fill: #e2e8f0;
+}
+
+.stroke-tremor-border,
+.dark .dark\:stroke-dark-tremor-border {
+  stroke: #2a2a3c;
+}
+
+.stroke-tremor-background,
+.dark .dark\:stroke-dark-tremor-background {
+  stroke: #13131f;
+}
+
+.border-tremor-background,
+.dark .dark\:border-dark-tremor-background {
+  border-color: #13131f;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #13131f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a3c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a50;
+}
+
+/* Drag and drop zone */
+.drag-active {
+  border-color: #6366f1 !important;
+  background: rgba(99, 102, 241, 0.1) !important;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+}
+
+/* Table row hover */
+.table-row-hover {
+  transition: background-color 0.2s ease;
+}
+
+.table-row-hover:hover {
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Focus styles */
+input:focus, button:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #6366f1;
+}
