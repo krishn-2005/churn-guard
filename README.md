@@ -19,7 +19,7 @@ An end-to-end machine learning web app that predicts customer churn and generate
 ```
 Customer Churn/
 ├── Notebook/
-│   └── main_simple_pipeline.ipynb   # EDA + model training
+│   └── main.ipynb 
 ├── Web/
 │   ├── Backend/
 │   │   ├── app.py                   # FastAPI server
