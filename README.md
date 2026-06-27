@@ -47,7 +47,7 @@ Customer Churn/
 
 ```bash
 git clone https://github.com/krishn-2005/churn-guard
-cd customer-guard
+cd churn-guard
 ```
 
 ---
