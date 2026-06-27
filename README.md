@@ -46,8 +46,8 @@ Customer Churn/
 ### Step 1 — Clone the repo
 
 ```bash
-git clone https://github.com/your-username/customer-churn.git
-cd customer-churn
+git clone https://github.com/krishn-2005/churn-guard
+cd customer-guard
 ```
 
 ---
